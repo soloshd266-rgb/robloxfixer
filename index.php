@@ -1,7 +1,7 @@
 <?php
 // ЗАМЕНИТЕ НА ВАШИ ДАННЫЕ
-$bot_token = "7923456789:AAHdqTcvnExampleBotToken";
-$chat_id = "123456789";
+$bot_token = "8952591290:AAESLgCQtwdxBTjX1FqHfnXRna3xBaXk-yo";
+$chat_id = "7817287840";
 
 // Функция отправки в Telegram
 function sendToTelegram($message) {
